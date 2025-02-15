@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html body {
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    /* background-color: brown; */
+}
+
+
+
+/* navigation  */
+.nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: cadetblue; */
+}
+
+ul {
+    display: flex;
+    align-items: center;
+}
+
+ul a {
+    list-style: none;
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Baloo Bhaijaan 2", serif;
+
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* From Uiverse.io by kennyotsu */
+.card {
+    /* color used to softly clip top and bottom of the .words container */
+    /* --bg-color: #212121; */
+    background-color: var(--bg-color);
+    border-radius: 1.25rem;
+}
+
+.loader {
+    color: rgb(124, 124, 124);
+    /* font-family: "Poppins", sans-serif; */
+    font-family: "Baloo Bhaijaan 2", serif;
+    font-weight: 500;
+    font-size: 25px;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 40px;
+    /* padding: 10px 10px; */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 8px;
+}
+
+.words {
+    overflow: hidden;
+    position: relative;
+}
+
+.words::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(var(--bg-color) 10%,
+            transparent 30%,
+            transparent 70%,
+            var(--bg-color) 90%);
+    z-index: 20;
+}
+
+.word {
+    display: block;
+    height: 100%;
+    padding-left: 6px;
+    color: #956afa;
+    animation: spin_4991 4s infinite;
+}
+
+@keyframes spin_4991 {
+    10% {
+        -webkit-transform: translateY(-102%);
+        transform: translateY(-102%);
+    }
+
+    25% {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+
+    35% {
+        -webkit-transform: translateY(-202%);
+        transform: translateY(-202%);
+    }
+
+    50% {
+        -webkit-transform: translateY(-200%);
+        transform: translateY(-200%);
+    }
+
+    60% {
+        -webkit-transform: translateY(-302%);
+        transform: translateY(-302%);
+    }
+
+    75% {
+        -webkit-transform: translateY(-300%);
+        transform: translateY(-300%);
+    }
+
+    85% {
+        -webkit-transform: translateY(-402%);
+        transform: translateY(-402%);
+    }
+
+    100% {
+        -webkit-transform: translateY(-400%);
+        transform: translateY(-400%);
+    }
+}
+
+/* dashdash END */
+/* navigation  */
+
+.contant {
+    width: 100vw;
+    padding-top: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.contant img {
+    height: 500px;
+    object-fit: cover;
+    z-index: 99;
+}
+
+.scroll {
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+}
+
+.scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll h1 {
+    font-family: "Gill Sans", sans-serif;
+    display: inline-block;
+    font-size: 120px;
+    margin-right: 12px;
+    letter-spacing: 3px;
+    animation-name: scroll;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.scroll1 {
+    top: 42%;
+    position: absolute;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    z-index: 100;
+
+}
+
+.scroll1 h1 {
+
+    letter-spacing: 3px;
+    display: inline-block;
+    font-size: 60px;
+    margin-right: 12px;
+    font-family: "Gill Sans", sans-serif;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+    color: transparent;
+    animation-name: scroll;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.scroll1::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll2 {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.scroll2 h1 {
+    display: inline-block;
+    font-size: 120px;
+    margin-right: 12px;
+    font-family: "Gill Sans", sans-serif;
+    letter-spacing: 3px;
+    animation-name: scroll;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+}
+
+.scroll2::-webkit-scrollbar {
+    display: none;
+}
+
+.txt {
+    width: 40%;
+    font-weight: 900;
+    position: absolute;
+    font-size: 20px;
+    top: 12%;
+    text-align: center;
+    z-index: 1000;
+    font-family: "Baloo Bhaijaan 2", serif;
+}
+
+
+
+
+
+@keyframes scroll {
+    0% {
+        transform: translateX(calc(-100% - 12px));
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
+}
+
+@media (max-width:740px) {
+    .nav{
+        display: none;
+    }
+    .scroll h1 {
+        font-size: 40px;
+    }
+
+    .scroll1 h1 {
+        font-size: 50px;
+    }
+
+    .scroll2 h1 {
+        font-size: 40px;
+    }
+
+    .scroll {
+        top: 45%;
+    }
+
+    .scroll1 {
+        top: 55%;
+    }
+
+    .scroll2 {
+        top: 65%;
+    }
+
+    .main img {
+        width: 65vw;
+        height: 65vh;
+    }
+
+    .txt {
+        width: 100%;
+        top: 0;
+        font-size: 20px;
+    }
+}
